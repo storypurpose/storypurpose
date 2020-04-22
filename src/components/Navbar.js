@@ -1,7 +1,8 @@
 import React from 'react'
+import logo from '../img/logo.png'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -23,26 +24,27 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
+            navBarActiveClass: 'is-active',
+          })
           : this.setState({
-              navBarActiveClass: '',
-            })
+            navBarActiveClass: '',
+          })
       }
     )
   }
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
+      <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation"
+        style={{ borderBottom: `1px solid #ddd` }}
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+              <img src={logo} alt="StoryPurpose" style={{ height: '88px', marginRight: '4pt' }} />
+              <span className="subtitle">
+                Story<b style={{ color: "#FF8800" }}>Purpose</b>
+              </span>
             </Link>
             {/* Hamburger menu */}
             <div
@@ -55,37 +57,30 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
+          <div id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`} >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
+              <Link className="navbar-item" to="/blog">
+                Blog
+              </Link>
+              {/* <Link className="navbar-item" to="/about">
                 About
               </Link>
               <Link className="navbar-item" to="/products">
                 Products
               </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
               <Link className="navbar-item" to="/contact">
                 Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
+              </Link> */}
             </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+            <div className="navbar-end">
+              <a className="button  is-primary"
+                style={{ marginTop: '5pt', backgroundColor: `#ff8800` }}
+                href="https://app.storypurpose.info"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
+                GET STARTED
+                <FontAwesomeIcon icon={faChevronRight} style={{ marginLeft: '2pt' }} />
               </a>
             </div>
           </div>

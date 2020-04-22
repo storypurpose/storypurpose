@@ -2,9 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import paragraphs from 'lines-to-paragraphs'
 
 export const IndexPageTemplate = ({
   image,
@@ -15,79 +19,67 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
+    <div>
+      <div style={{ backgroundColor: `#98EEF6` }}>
         <div className="section">
+          <div className="container">
+            <div className="columns">
+              <div className="column is-5 is-offset-1">
+                <h1 className="title is-size-1" style={{ marginTop: `70pt`, marginBottom: `40pt` }}>
+                  {title}
+                </h1>
+                <h2 className="subtitle is-size-4">
+                  {subheading}
+                </h2>
+
+                <a className="button is-large is-primary"
+                  style={{ backgroundColor: `#ff8800` }}
+                  href="https://app.storypurpose.info"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GET STARTED
+                <FontAwesomeIcon icon={faChevronRight} style={{ marginLeft: '2pt' }} />
+                </a>
+
+              </div>
+              <div className="column is-6">
+
+                <div style={{
+                  backgroundImage: `url(${
+                    !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+                    })`,
+                  backgroundRepeat: `no-repeat`,
+                  height: `500px`
+                }}
+                ></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section className="section section--gradient">
+        <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    <h1>{mainpitch.title}</h1>
                   </div>
                   <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
+                    <h3 className="subtitle" dangerouslySetInnerHTML={{ __html: paragraphs(mainpitch.description) }} />
                   </div>
                 </div>
                 <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
+                  <div className="column is-12" style={{ marginTop: `60pt` }}>
+                    <h1>{heading}</h1>
                     <p>{description}</p>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
+                {/* <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
                       See all products
@@ -104,15 +96,48 @@ export const IndexPageTemplate = ({
                       Read more
                     </Link>
                   </div>
-                </div>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div style={{ backgroundColor: `#f0f0f0` }}>
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="content">
+                <Features gridItems={intro.blurbs} />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
-)
+
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="content">
+                <div className="column is-12">
+                  <h3 className="is-size-2">Latest stories </h3>
+                  <BlogRoll />
+                  <div className="column is-12 has-text-centered">
+                    <Link className="btn" to="/blog">
+                      Read more
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  )
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
@@ -184,8 +209,6 @@ export const pageQuery = graphql`
             }
             text
           }
-          heading
-          description
         }
       }
     }
