@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
                   GET STARTED
                 <FontAwesomeIcon icon={faChevronRight} style={{ marginLeft: '2pt' }} />
                 </a>
-
+                <div className="is-size-7 has-text-grey-dark" style={{ marginTop: '4pt' }}>100% Free. No credit card required.</div>
               </div>
               <div className="column is-6">
 
@@ -60,7 +60,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
 
-      <section className="section section--gradient">
+      <section className="section section--gradient" style={{ margin: '50pt 0' }}>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -73,41 +73,20 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle" dangerouslySetInnerHTML={{ __html: paragraphs(mainpitch.description) }} />
                   </div>
                 </div>
-                <div className="columns">
-                  <div className="column is-12" style={{ marginTop: `60pt` }}>
-                    <h1>{heading}</h1>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                {/* <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div style={{ backgroundColor: `#f0f0f0` }}>
+      <div style={{ backgroundColor: `#f8f8f8` }}>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="content">
+              <div className="content" style={{ paddingTop: '20pt' }}>
+                <h1>{heading}</h1>
+                <p>{description}</p>
+
                 <Features gridItems={intro.blurbs} />
               </div>
             </div>
@@ -207,6 +186,7 @@ export const pageQuery = graphql`
                 }
               }
             }
+            title,
             text
           }
         }

@@ -6,7 +6,7 @@ subheading: A free jira issue visualization and storyboarding tool
 mainpitch:
   title: Why StoryPurpose
   description: |
-    As software continues to eat the world, organizations are undergoing digital transformation. In doing that it is extremely important to ensure every effort put in digital adoption is eventually aligned to the organization's purpose.
+    As software continues to eat the world, organizations are undergoing digital transformation. In doing so, it becomes extremely important to ensure every effort put in digital adoption is eventually aligned with the organization's bigger purpose.
 
     StoryPurpose enables visualizing the smallest unit of deliverable (user story) in the bigger scheme of things
 
@@ -19,14 +19,12 @@ description: >-
 intro:
   blurbs:
     - image: /img/purposeview.png
+      title: Hierarchical view of the story purpose. 
       text: |
-        Hierarchical view of the story purpose. 
-
         Depending upon the configuration, the tool provides a detailed view of the purpose of every level of the story. This makes it easier to understand if the intent of the give stories aligns all the way back to that of the organization.
         
     - image: /img/storyboardview.png
+      title: Storyboard view of an epic.
       text: |
-        Storyboard view of an epic.
-
         Depending upon the size of the epic and the related stories, it may not necessarily be possible to complete all stories in a single sprint or a release. Having a release-wise layout of the stories helps plan better deliveries.
 ---

@@ -8,12 +8,13 @@ const FeatureGrid = ({ gridItems }) => (
     {gridItems.map(item => (
       <div key={item.text} className="column is-6">
         <section className="section">
-          <div className="has-text-centered container">
-            <div style={{ width: '280px', display: 'inline-block', marginBottom: '20pt' }} >
-              <PreviewCompatibleImage imageInfo={item} />
-            </div>
+          <div className="has-text-weight-semibold" style={{ marginBottom: '10pt' }}>
+            {item.title}
           </div>
-          <p dangerouslySetInnerHTML={{ __html: paragraphs(item.text) }} ></p>
+          <div style={{ width: '280px', display: 'inline-block', marginBottom: '20pt' }} >
+            <PreviewCompatibleImage imageInfo={item} />
+          </div>
+          <p>{item.text}</p>
         </section>
       </div>
     ))}
@@ -24,6 +25,7 @@ FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      title: PropTypes.string,
       text: PropTypes.string,
     })
   ),
