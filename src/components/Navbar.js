@@ -36,8 +36,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav className="navbar is-transparent" role="navigation" aria-label="main-navigation"
-        style={{ borderBottom: `1px solid #ddd` }}
-      >
+        style={{ borderBottom: `1px solid #ddd` }} >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
