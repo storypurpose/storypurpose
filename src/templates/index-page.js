@@ -79,7 +79,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
 
-      <div style={{ backgroundColor: `#f8f8f8` }}>
+      <div class="section section--gradient" style={{ backgroundColor: `#f8f8f8` }}>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -94,7 +94,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
 
-      <section className="section section--gradient">
+      {/* <section className="section section--gradient">
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -112,8 +112,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
-      </section>
-
+      </section> */}
 
     </div>
   )

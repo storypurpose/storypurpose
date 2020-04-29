@@ -11,11 +11,15 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer" style={{ borderTop: `1px solid #eee` }}>
-        <div className="content has-text-centered">
+        <div className="content has-text-centered" style={{ paddingBottom: 0 }}>
           <div className="container">
-            <a target="_blank" href="">Terms of use</a>
-            <a target="_blank" href="" style={{ marginLeft: '20pt' }}>Privacy policy</a>
-
+            <a href="/about/terms">Terms of service</a>
+            <a href="/about/privacy" style={{ marginLeft: '20pt' }}>Privacy policy</a>
+            <br /><br />
+            <small>
+              This website uses cookies to provide you with the best browsing experience.<br />
+            By accessing this site you agree to allow cookies.
+            </small>
             {/* 
             <a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by macrovector_official - www.freepik.com</a> 
             <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by katemangostar - www.freepik.com</a>

@@ -59,12 +59,7 @@ const Navbar = class extends React.Component {
           </div>
           <div id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`} >
             <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              {/* <Link className="navbar-item" to="/about">
-                About
-              </Link>
+              {/* 
               <Link className="navbar-item" to="/products">
                 Products
               </Link>
@@ -73,6 +68,12 @@ const Navbar = class extends React.Component {
               </Link> */}
             </div>
             <div className="navbar-end">
+            <Link className="navbar-item" to="/about">
+                About
+              </Link>
+              <Link className="navbar-item" to="/blog" style={{ marginRight: '20pt' }}>
+                Blog
+              </Link>
               <a className="button  is-primary"
                 style={{ marginTop: '5pt', backgroundColor: `#ff8800` }}
                 href="https://app.storypurpose.info"
