@@ -33,20 +33,20 @@ const TemplateWrapper = ({ children }) => {
           sizes="16x16"
         />
 
-        <link
-          rel="mask-icon"
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
-        />
+        <link rel="mask-icon" href={`${withPrefix('/')}img/safari-pinned-tab.svg`} color="#ff4400" />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
-        />
+        <meta property="og:description" content="Build the right product, the right way. Jira tools to build purposeful stories." />
+        <meta property="og:url" content="https://www.storypurpose.info" />
+        <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
+        <meta property="og:site_name" content="StoryPurpose" />
+
+        <meta name="twitter:site" content="@story_purpose" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta property="fb:app_id" content="232219554524065" />
       </Helmet>
       <Navbar />
       <div>{children}</div>
