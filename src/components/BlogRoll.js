@@ -9,42 +9,36 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div>
         {posts && posts.map(({ node: post }) => (
-          <div className="column is-4" key={post.id}>
-            
-            <article className={`blog-list-item tile is-child box 
+          <article className={`blog-list-item is-child
                 ${ post.frontmatter.featuredpost ? 'is-featured' : ''}`} >
-              <header>
-                {post.frontmatter.featuredimage ? (
-                  <div className="featured-thumbnail">
-                    <PreviewCompatibleImage
-                      imageInfo={{ image: post.frontmatter.featuredimage,
-                        alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                      }}
-                    />
-                  </div>
-                ) : null}
-                <p className="post-meta">
-                  <Link className="title has-text-link is-size-4" to={post.fields.slug} >
-                    {post.frontmatter.title}
-                  </Link>
-                  <br />
-                  <span className="has-text-grey">
-                    {post.frontmatter.date}
-                  </span>
-                </p>
-              </header>
-              <p>
-                {post.excerpt}
+            <header>
+              {post.frontmatter.featuredimage ? (
+                <div className="featured-thumbnail">
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: post.frontmatter.featuredimage,
+                      alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                    }}
+                  />
+                </div>
+              ) : null}
+              <p className="post-meta pt-1">
+                <span className="has-text-grey is-size-7 is-uppercase">
+                  {post.frontmatter.date}
+                </span>
                 <br />
-                <br />
-                <Link className="button" to={post.fields.slug}>
-                  Keep Reading →
-                  </Link>
+                <Link className="title has-text-link is-size-4" to={post.fields.slug} >
+                  {post.frontmatter.title}
+                </Link>
+
+                <div className="mt-3 mb-3">
+                  {post.excerpt}
+                </div>
               </p>
-            </article>
-          </div>
+            </header>
+          </article>
         ))}
       </div>
     )
