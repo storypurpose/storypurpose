@@ -18,7 +18,7 @@ const Footer = class extends React.Component {
             <br /><br />
             <small>
               This website uses cookies to provide you with the best browsing experience.<br />
-            By accessing this site you agree to allow cookies.
+            By accessing this site you agree to allow terms.
             </small>
             {/* 
             <a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by macrovector_official - www.freepik.com</a> 

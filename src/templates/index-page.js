@@ -60,7 +60,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
 
-      <section className="section section--gradient" style={{ margin: '50pt 0' }}>
+      <section className="section section--gradient" style={{ margin: '24pt 0' }}>
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -180,7 +180,7 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 600, quality: 64) {
                   ...GatsbyImageSharpFluid
                 }
               }

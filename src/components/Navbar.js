@@ -67,12 +67,12 @@ const Navbar = class extends React.Component {
               </Link> */}
             </div>
             <div className="navbar-end">
-            <Link className="navbar-item" to="/about" style={{ marginRight: '20pt' }}>
+              <Link className="navbar-item" to="/about">
                 About
               </Link>
-              {/* <Link className="navbar-item" to="/blog" style={{ marginRight: '20pt' }}>
+              <a className="navbar-item" href="https://blog.storypurpose.info" style={{ marginRight: '20pt' }}>
                 Blog
-              </Link> */}
+              </a>
               <a className="button  is-primary"
                 style={{ marginTop: '5pt', backgroundColor: `#ff8800` }}
                 href="https://app.storypurpose.info"
