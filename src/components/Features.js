@@ -16,7 +16,8 @@ const FeatureGrid = ({ gridItems }) => {
               <div className="has-text-weight-semibold" style={{ marginBottom: '10pt' }}>
                 {item.title}
               </div>
-              <p className="content" dangerouslySetInnerHTML={{ __html: item.text }} />
+              {item.text}
+              {/* <p className="content" dangerouslySetInnerHTML={{ __html: paragraphs(item.text) }} /> */}
             </div>
             <div className="column is-6">
               <div style={{ width: '480px', display: 'inline-block', marginBottom: '20pt' }} >
