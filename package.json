@@ -1,7 +1,7 @@
 {
   "name": "storypurpose-website",
   "description": "StoryPurpose website",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Abhijeet Dhamankar",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
