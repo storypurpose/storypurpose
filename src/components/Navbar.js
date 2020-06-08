@@ -75,7 +75,7 @@ const Navbar = class extends React.Component {
               </a>
               <a className="button  is-primary"
                 style={{ marginTop: '5pt', backgroundColor: `#ff8800` }}
-                href="https://app.storypurpose.info"
+                href="https://jira.storypurpose.info"
                 target="_blank"
                 rel="noopener noreferrer"
               >
