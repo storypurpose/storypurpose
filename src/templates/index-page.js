@@ -34,7 +34,7 @@ export const IndexPageTemplate = ({
 
                 <a className="button is-large is-primary"
                   style={{ backgroundColor: `#ff8800` }}
-                  href="https://jira.storypurpose.info"
+                  href="https://storypurpose.github.io/app"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

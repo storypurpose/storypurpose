@@ -70,12 +70,12 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/about">
                 About
               </Link>
-              <a className="navbar-item" href="https://blog.storypurpose.info" style={{ marginRight: '20pt' }}>
+              <a className="navbar-item" href="https://storypurpose.github.io/blog" style={{ marginRight: '20pt' }}>
                 Blog
               </a>
               <a className="button  is-primary"
                 style={{ marginTop: '5pt', backgroundColor: `#ff8800` }}
-                href="https://jira.storypurpose.info"
+                href="https://storypurpose.github.io/app"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -3,7 +3,7 @@ templateKey: 'about-page'
 path: /privacy
 title: Privacy policy
 ---
-Our Privacy Policy was posted on 25 March 2020. It governs the privacy terms of our website, located at storypurpose.info, and the tools we provide you (the "Website" or the "Service"). Any capitalized terms not defined in our Privacy Policy, have the meaning as specified in our Terms of Use accessible at [Terms of service](/about/terms)
+Our Privacy Policy was posted on 25 March 2020. It governs the privacy terms of our website, located at https://storypurpose.github.io, and the tools we provide you (the "Website" or the "Service"). Any capitalized terms not defined in our Privacy Policy, have the meaning as specified in our Terms of Use accessible at [Terms of service](/about/terms)
 
 ### Your Privacy
 Our Website follows all legal requirements to protect your privacy. Our Privacy Policy is a legal statement that explains how we may collect information from you, how we may share your information, and how you can limit our sharing of your information. You will see terms in our Privacy Policy that are capitalized. These terms have meanings as described in the Definitions section below.

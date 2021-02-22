@@ -39,7 +39,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content="Build the right product, the right way. Jira tools to build purposeful stories." />
-        <meta property="og:url" content="https://www.storypurpose.info" />
+        <meta property="og:url" content="https://storypurpose.github.io" />
         <meta property="og:image" content={`${withPrefix('/')}img/og-image.jpg`} />
         <meta property="og:site_name" content="StoryPurpose" />
 
